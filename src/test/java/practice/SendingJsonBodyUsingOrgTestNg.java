@@ -3,13 +3,12 @@ package practice;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 
-import java.util.HashMap;
-
+import org.json.JSONObject;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
 
-public class SendingJsonBodyUsingHashMap {
+public class SendingJsonBodyUsingOrgTestNg {
 	
 	String id;
 	
@@ -27,13 +26,11 @@ public class SendingJsonBodyUsingHashMap {
 	@Test(priority = 1)
 	void postNewData() {
 		
-		HashMap data = new HashMap();
-		
-		HashMap address1 = new HashMap();
+		JSONObject address1 = new JSONObject();
 		address1.put("city", "India");
-		HashMap addresses[] = {address1};
+		JSONObject addresses[] = {address1};
 		
-		
+		JSONObject data = new JSONObject();
 		data.put("firstName", "Alpha");
 		data.put("lastName", "Beta");
 		data.put("gender", "male");
@@ -41,7 +38,7 @@ public class SendingJsonBodyUsingHashMap {
 		
 		 Response responseBody = given()
 			.contentType("application/json")  // defining what content type is requested
-			.body(data)
+			.body(data.toString()) //JSON Object needs to be converted to string while passing
 		
 		.when()
 			.post("http://localhost:3000/students")
@@ -56,7 +53,7 @@ public class SendingJsonBodyUsingHashMap {
 		 System.out.println("---------------" + id);
 	}
 	
-	@Test(priority = 3)
+//	@Test(priority = 3)
 	void deleteData() {
 		
 		when()

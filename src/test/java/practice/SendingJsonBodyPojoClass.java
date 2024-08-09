@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
 
-public class SendingJsonBodyUsingHashMap {
+public class SendingJsonBodyPojoClass {
 	
 	String id;
 	
@@ -27,17 +27,15 @@ public class SendingJsonBodyUsingHashMap {
 	@Test(priority = 1)
 	void postNewData() {
 		
-		HashMap data = new HashMap();
-		
 		HashMap address1 = new HashMap();
 		address1.put("city", "India");
 		HashMap addresses[] = {address1};
 		
-		
-		data.put("firstName", "Alpha");
-		data.put("lastName", "Beta");
-		data.put("gender", "male");
-		data.put("address", addresses);
+		Pojo_PostRequest data = new Pojo_PostRequest();
+		data.setFirstName("Alpha");
+		data.setLastName("Beta");
+		data.setGender("male");
+		data.setAddress(addresses);
 		
 		 Response responseBody = given()
 			.contentType("application/json")  // defining what content type is requested
