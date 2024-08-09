@@ -3,12 +3,17 @@ package practice;
 import static io.restassured.RestAssured.given;
 import static io.restassured.RestAssured.when;
 
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+
 import org.json.JSONObject;
+import org.json.JSONTokener;
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
 
-public class SendingJsonBodyUsingOrgTestNg {
+public class SendingJsonBodyUsingExternalJsonFile {
 	
 	String id;
 	
@@ -24,17 +29,14 @@ public class SendingJsonBodyUsingOrgTestNg {
 	}
 	
 	@Test(priority = 1)
-	void postNewData() {
+	void postNewData() throws FileNotFoundException {
 		
-		JSONObject address1 = new JSONObject();
-		address1.put("city", "India");
-		JSONObject addresses[] = {address1};
+		File file = new File("D:/eclipse22-workspace/eclipse-workspace-personal-RestAssured-project/RestAssuredProject/src/test/resources/testData.json"); // access the file
+		FileReader fr = new FileReader(file); // read the file
+		JSONTokener jt = new JSONTokener(fr); // extracts source string from the file and converts the data in a token 
+											  // and this is used by jsonObject to parse the source string to json
+		JSONObject data = new JSONObject(jt); // access the json data
 		
-		JSONObject data = new JSONObject();
-		data.put("firstName", "Alpha");
-		data.put("lastName", "Beta");
-		data.put("gender", "male");
-		data.put("address", addresses);
 		
 		 Response responseBody = given()
 			.contentType("application/json")  // defining what content type is requested

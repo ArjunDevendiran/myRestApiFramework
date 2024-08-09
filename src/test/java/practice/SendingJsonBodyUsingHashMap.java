@@ -1,14 +1,13 @@
 package practice;
 
+import static io.restassured.RestAssured.given;
+import static io.restassured.RestAssured.when;
+
+import java.util.HashMap;
+
 import org.testng.annotations.Test;
 
 import io.restassured.response.Response;
-
-import static io.restassured.RestAssured.*;
-import static io.restassured.matcher.RestAssuredMatchers.*;
-import static org.hamcrest.Matchers.*;
-
-import java.util.HashMap;
 
 public class SendingJsonBodyUsingHashMap {
 	

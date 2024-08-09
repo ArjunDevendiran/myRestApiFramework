@@ -1,0 +1,22 @@
+{
+  "students": [
+    {
+      "id": 1,
+      "firstName": "Jack",
+      "lastName": "Ma",
+      "gender": "male",
+      "age": 50,
+      "address": {
+        "streetAddress": "101",
+        "city": "San Diego",
+        "state": "CA"
+      },
+      "phoneNumbers": [
+        {
+          "type": "home",
+          "number": "7341234582"
+        }
+      ]
+    }
+  ]
+}
