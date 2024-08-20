@@ -3,12 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.SendingJsonBodyUsingExternalJsonFile">
+      <class name="practice.TestParsingJsonResponseFrValidation">
         <methods>
-          <include name="getData"/>
-          <include name="postNewData"/>
+          <include name="printAllFirstName"/>
         </methods>
-      </class> <!-- practice.SendingJsonBodyUsingExternalJsonFile -->
+      </class> <!-- practice.TestParsingJsonResponseFrValidation -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
