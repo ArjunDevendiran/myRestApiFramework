@@ -1,17 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-08-14T12:06:24 IST" name="Default suite" finished-at="2024-08-14T12:06:29 IST" duration-ms="4195">
+  <suite started-at="2024-09-02T20:17:58 IST" name="Suite" finished-at="2024-09-02T20:18:01 IST" duration-ms="2667">
     <groups>
     </groups>
-    <test started-at="2024-08-14T12:06:24 IST" name="Default test" finished-at="2024-08-14T12:06:29 IST" duration-ms="4195">
-      <class name="practice.TestParsingJsonResponseFrValidation">
-        <test-method signature="printAllFirstName()[pri:0, instance:practice.TestParsingJsonResponseFrValidation@693fe6c9]" started-at="2024-08-14T12:06:25 IST" name="printAllFirstName" finished-at="2024-08-14T12:06:29 IST" duration-ms="4133" status="PASS">
+    <test started-at="2024-09-02T20:17:58 IST" name="Test" finished-at="2024-09-02T20:18:01 IST" duration-ms="2667">
+      <class name="chainingTest.CreateUser">
+        <test-method signature="createUser(org.testng.ITestContext)[pri:0, instance:chainingTest.CreateUser@5f9b2141]" started-at="2024-09-02T20:17:58 IST" name="createUser" finished-at="2024-09-02T20:18:01 IST" duration-ms="2397" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@79e4c792]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- printAllFirstName -->
-      </class> <!-- practice.TestParsingJsonResponseFrValidation -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- createUser -->
+      </class> <!-- chainingTest.CreateUser -->
+      <class name="chainingTest.DeleteUser">
+        <test-method signature="deleteUser(org.testng.ITestContext)[pri:0, instance:chainingTest.DeleteUser@2053d869]" started-at="2024-09-02T20:18:01 IST" name="deleteUser" finished-at="2024-09-02T20:18:01 IST" duration-ms="27" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@79e4c792]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- deleteUser -->
+      </class> <!-- chainingTest.DeleteUser -->
+      <class name="chainingTest.GetUser">
+        <test-method signature="getUser(org.testng.ITestContext)[pri:0, instance:chainingTest.GetUser@2b48a640]" started-at="2024-09-02T20:18:01 IST" name="getUser" finished-at="2024-09-02T20:18:01 IST" duration-ms="102" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@79e4c792]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getUser -->
+      </class> <!-- chainingTest.GetUser -->
+      <class name="chainingTest.UpdateUser">
+        <test-method signature="updateUser(org.testng.ITestContext)[pri:0, instance:chainingTest.UpdateUser@1e683a3e]" started-at="2024-09-02T20:18:01 IST" name="updateUser" finished-at="2024-09-02T20:18:01 IST" duration-ms="84" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[org.testng.TestRunner@79e4c792]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- updateUser -->
+      </class> <!-- chainingTest.UpdateUser -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
