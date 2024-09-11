@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="practice.TestParsingJsonResponseFrValidation">
+      <class name="chainingTest.DeleteUser">
         <methods>
-          <include name="printAllFirstName"/>
+          <include name="deleteUser" invocation-numbers="0"/>
         </methods>
-      </class> <!-- practice.TestParsingJsonResponseFrValidation -->
+      </class> <!-- chainingTest.DeleteUser -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

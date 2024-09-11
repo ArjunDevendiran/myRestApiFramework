@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+
+<!--ITestcontext vars set at suite level and get at suite level will also work for chaining with this xml as data at suite level will be accessible by all elements within suite-->
+
+
+<suite name="Suite">
+  <test thread-count="5" name="Test">
+    <classes>
+	  <class name="chainingTest.CreateUser"/>
+      <class name="chainingTest.GetUser"/>
+      <class name="chainingTest.UpdateUser"/>
+      <class name="chainingTest.DeleteUser"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->
