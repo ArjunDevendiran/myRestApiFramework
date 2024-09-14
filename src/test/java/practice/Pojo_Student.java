@@ -4,6 +4,8 @@ import java.util.HashMap;
 
 public class Pojo_Student {
 	
+	// Make sure the json keys match exactly as defined in the swagger or any other specificaton doc, it is case sensitive
+	
 	String firstName;
 	String lastName;
 	String gender;
