@@ -63,6 +63,11 @@ public class UserTest {
 	@Test(priority = 3)
 	public void updateUser() {
 		
+		// updating following details
+		userPayload.setFirstName(fk.name().firstName());
+		userPayload.setLastName(fk.name().lastName());
+		userPayload.setEmail(fk.internet().safeEmailAddress());
+		
 		Response response = UserEndPoint.updateUser(this.userPayload.getUsername(), userPayload);
 		response.then().log().all();
 		
