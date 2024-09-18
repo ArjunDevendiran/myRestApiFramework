@@ -1,0 +1,5 @@
+11:59:16.635 [main] INFO  api.test.UserTest - =================  Creating user =================
+11:59:20.944 [main] INFO  api.test.UserTest - =================  Getting user info =================
+12:00:31.603 [main] INFO  api.test.UserTest - =================  Creating user =================
+12:00:35.206 [main] INFO  api.test.UserTest - =================  Getting user info =================
+12:00:37.033 [main] INFO  api.test.UserTest - =================  Updating user info =================
