@@ -1,5 +1,7 @@
 package api.test;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Test;
@@ -18,9 +20,10 @@ public class UserTest {
 	User userPayload;
 	ObjectMapper objMpr;
 	String jsonData;
+	Logger logger;
 		
 	@BeforeClass
-	public void setData() {
+	public void setUp() {
 		
 		fk = new Faker();
 		
@@ -36,11 +39,16 @@ public class UserTest {
 		
 		// for Serialization - converting json obj to string
 		objMpr = new ObjectMapper();
+		
+		//log4j logger
+		logger = LogManager.getLogger(this.getClass());
 	}
 	
 	@Test(priority = 1)
 	public void createUser() throws JsonProcessingException {
 		 
+		logger.info("=================  Creating user =================");
+		
 		// Serialization - converting json obj to string
 		jsonData = objMpr.writerWithDefaultPrettyPrinter().writeValueAsString(userPayload);
 		System.out.println(jsonData);
@@ -54,14 +62,19 @@ public class UserTest {
 	
 	@Test(priority = 2)
 	public void getUser() {
+		
+		logger.info("=================  Getting user info =================");
+		
 		Response response = UserEndPoint.getUser(this.userPayload.getUsername());
 		response.then().log().all();
 		
 		Assert.assertEquals(response.statusCode(), 200);
 	}
 	
-//	@Test(priority = 3)
+	@Test(priority = 3)
 	public void updateUser() {
+		
+		logger.info("=================  Updating user info =================");
 		
 		// updating following details
 		userPayload.setFirstName(fk.name().firstName());
@@ -76,6 +89,8 @@ public class UserTest {
 	
 //	@Test(priority = 4)
 	public void deleteUser() {
+		
+		logger.info("=================  Deleting user =================");
 		
 		Response response = UserEndPoint.deleteUser(this.userPayload.getUsername());
 		response.then().log().all();
