@@ -15,8 +15,10 @@
    
    
     <classes>
-      <class name="api.test.UserTest"/>
+<!--      <class name="api.test.UserTest"/>-->
 <!--      <class name="api.test.UserTest_XLDataDriven"/>-->
+
+		<class name="api.test.UserTest_PropertiesFile"/>
     </classes>
   
   
