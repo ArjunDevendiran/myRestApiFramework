@@ -1,3 +1,14 @@
 10:50:17.551 [main] INFO  api.test.UserTest_PropertiesFile - =================  Creating user =================
 10:50:22.655 [main] INFO  api.test.UserTest_PropertiesFile - =================  Getting user info =================
 10:50:25.395 [main] INFO  api.test.UserTest_PropertiesFile - =================  Updating user info =================
+20:16:35.317 [main] INFO  api.test.UserTest - =================  Creating user =================
+20:16:42.596 [main] INFO  api.test.UserTest - =================  Getting user info =================
+20:16:44.615 [main] INFO  api.test.UserTest - =================  Updating user info =================
+20:21:07.132 [main] INFO  api.test.UserTest - =================  Creating user =================
+20:21:12.191 [main] INFO  api.test.UserTest - =================  Getting user info =================
+20:21:16.605 [main] INFO  api.test.UserTest - =================  Updating user info =================
+20:21:19.337 [main] INFO  api.test.UserTest - =================  Deleting user =================
+20:39:36.653 [main] INFO  api.test.UserTest - =================  Creating user =================
+20:39:41.573 [main] INFO  api.test.UserTest - =================  Getting user info =================
+20:39:43.412 [main] INFO  api.test.UserTest - =================  Updating user info =================
+20:39:45.000 [main] INFO  api.test.UserTest - =================  Deleting user =================
