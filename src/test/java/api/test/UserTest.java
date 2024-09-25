@@ -87,7 +87,7 @@ public class UserTest {
 		Assert.assertEquals(response.statusCode(), 200);
 	}
 	
-//	@Test(priority = 4)
+	@Test(priority = 4)
 	public void deleteUser() {
 		
 		logger.info("=================  Deleting user =================");
